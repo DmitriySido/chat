@@ -1,0 +1,24 @@
+{
+  "name": "chatback",
+  "version": "0.1.0",
+  "private": true,
+  "main": "server/server.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "node server/server.js",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "next": "14.2.5",
+    "react": "^18",
+    "react-dom": "^18",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5"
+  }
+}
