@@ -31,10 +31,10 @@ app.post('/login', (req, res) => {
 
 // Middleware для проверки JWT токена
 const authenticateToken = (socket, next) => {
-  const token = socket.handshake.auth.token;
+  const token = socket.handshake.auth.token; // Получение токена
   if (!token) return next(new Error('Authentication error'));
 
-  jwt.verify(token, SECRET_KEY, (err, user) => {
+  jwt.verify(token, SECRET_KEY, (err, user) => { // Проверка токена
     if (err) return next(new Error('Authentication error'));
     socket.user = user;
     next();
